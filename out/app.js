@@ -19,7 +19,9 @@ console.log("All command:");
 console.log("startServer stopServer run runOnDevice stop stopAll rerun save saveToDevice newProject runProject saveProject'");
 rl.on('line', function(line){ 
     line=line.trim();
-    if(line==="r"){
+    if(line==="q"){
+        extension.stopAll();
+    }else if(line==="r"){
         extension.runProject();
     }else if(line==="s"){
         extension.saveProject();
@@ -28,7 +30,7 @@ rl.on('line', function(line){
     }else{
         try{
             if(!extension[line]){
-                console.log("Error: Unknown command~"+e);
+                console.log("Error: Unknown command~"+line);
                 return;
             }
             extension[line]();
