@@ -10,5 +10,6 @@ startServer stopServer run runOnDevice stop stopAll rerun save saveToDevice newP
 # 缩写指令
 r 是run的缩写 代表运行  
 s 是save的缩写 代表保存  
-回车即可运行  
+q 代表结束运行
+
 
